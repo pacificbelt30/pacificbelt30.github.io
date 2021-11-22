@@ -1,0 +1,9 @@
+{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<aside style="border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px;">
+    <header>
+    <h2>{{.Title}}</h2>
+    </header>
+    {{.TableOfContents}}
+</aside>
+{{ end }}
+
