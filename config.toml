@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://localhost:8000'
 languageCode = "ja"
 title = 'ナグリガキ'
 theme = "beautifulhugo"  # この行を追加
@@ -20,7 +20,7 @@ buildFuture = true
   author = "Pacificbelt30"
   subtitle = "my tec doc"
   mainSections = ["post","posts"]
-  logo = "img/avatar-icon.png" # Expecting square dimensions
+  logo = "https://avatars.githubusercontent.com/u/57101176?s=400&v=4" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
@@ -48,9 +48,9 @@ buildFuture = true
 #  desc = "Hexagon"
 
 [Author]
-  name = "Some Person"
-  website = "yourwebsite.com"
-  github = "username"
+  name = "Pacificbelt30"
+  website = "https://github.com/pacificbelt30"
+  github = "pacificbelt30"
 
 [[menu.main]]
     name = "Blog"
