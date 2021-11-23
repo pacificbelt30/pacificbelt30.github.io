@@ -1,6 +1,6 @@
 baseURL = 'https://pacificbelt30.github.io'
 languageCode = "ja"
-title = 'ナグリガキ'
+title = '自分用ドキュメント置き場'
 theme = "beautifulhugo"  # この行を追加
 contentDir = "post"
 disableKinds = ["RSS", "sitemap"]
