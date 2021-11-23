@@ -17,6 +17,7 @@ buildFuture = true
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  since = "2021"
   author = "Pacificbelt30"
   subtitle = "my tec doc"
   mainSections = ["post","posts"]
