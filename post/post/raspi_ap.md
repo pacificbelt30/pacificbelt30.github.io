@@ -1,5 +1,5 @@
 ---
-title: "Raspi_ap"
+title: "ラズパイをWiFiのアクセスポイントとして使う方法"
 date: 2021-11-23T20:06:54+09:00
 tags: ["Seminar","RaspberryPi"]
 featured_image: ""
