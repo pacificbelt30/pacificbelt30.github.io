@@ -3,14 +3,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>RaspberryPi - 自分用ドキュメント置き場</title>
+<title>Gitでmergeを取り消す方法 - 自分用ドキュメント置き場</title>
+<meta name=description content="背景 とあるファイルをWindows上で編集，違うブランチとしてコミットし， それをLinux上で git merge <branch> を実行し，マージを行う時， コンフリクトが">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<meta property="og:title" content="RaspberryPi">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/git_abort\/","name":"Gitでmergeを取り消す方法"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"Gitでmergeを取り消す方法","description":"背景 とあるファイルをWindows上で編集，違うブランチとしてコミットし， それをLinux上で git merge \u0026lt;branch\u0026gt; を実行し，マージを行う時， コンフリクトが","inLanguage":"en","wordCount":365,"datePublished":"2021-12-01T01:46:53","dateModified":"2021-12-01T01:46:53","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["github, git"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/git_abort\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="Gitでmergeを取り消す方法">
+<meta property="og:description" content="背景 とあるファイルをWindows上で編集，違うブランチとしてコミットし， それをLinux上で git merge <branch> を実行し，マージを行う時， コンフリクトが">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/tags/raspberrypi/">
+<meta property="og:url" content="https://pacificbelt30.github.io/post/git_abort/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="RaspberryPi">
+<meta name=twitter:title content="Gitでmergeを取り消す方法">
+<meta name=twitter:description content="背景 とあるファイルをWindows上で編集，違うブランチとしてコミットし， それをLinux上で git merge <branch> を実行し，マージを行う時， コンフリクトが">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
@@ -105,9 +109,14 @@
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=tags-heading>
-<h1>RaspberryPi</h1>
-<hr class=small>
+<div class=post-heading>
+<h1>Gitでmergeを取り消す方法</h1>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;365&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
 </div>
 </div>
 </div>
@@ -117,29 +126,39 @@
 <div class=container role=main>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=posts-list>
-<article class=post-preview>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/>
-<h2 class=post-title>ラズパイをWiFiのアクセスポイントとして使う方法</h2>
-</a>
-<p class=post-meta>
-<span class=post-meta>
-<i class="fas fa-calendar"></i>&nbsp;Posted on November 23, 2021
-&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;151&nbsp;words
-&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
-</span>
-</p>
-<div class=post-entry>
-ラズパイをWiFiのアクセスポイントとして使う方法 まず， ifconfig と打って，無線LANが使えることを確認 wlan0などが見つからない場合は rfkill list と打っ
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=post-read-more>[Read More]</a>
-</div>
+<article role=main class=blog-post>
+<h2 id=背景>背景</h2>
+<p>とあるファイルをWindows上で編集，違うブランチとしてコミットし，
+それをLinux上で</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>git merge &lt;branch&gt;
+</code></pre></div><p>を実行し，マージを行う時，
+コンフリクトが起こった．
+コンフリクトの起こったファイルの中身を見ると
+ソースコード全行が該当箇所となっていた．
+原因はファイルを開いたときから明らかでそれぞれのブランチでファイルの改行コードが違うため（WindowsはCRLF,LinuxはLF），コンフリクトが起こっていた．
+ほとんど内容が一緒で改行コードが違うだけでいちいちconflictの解消作業を行うのはさすがに面倒なので
+mergeを行う前まで状態を戻したくなった．</p>
+<h2 id=mergeを取り消す>mergeを取り消す</h2>
+<p>結果からいうと
+mergeを取り消すには</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>git merge --abort
+</code></pre></div><p>を実行すれば良い．</p>
+<h2 id=終わりに>終わりに</h2>
+<p>vscode上で改行コードを変更しているにも関わらず，何故かCRLFのままなのは何故だろうか．</p>
 <div class=blog-tags>
-<a href=https://pacificbelt30.github.io/tags/seminar/>Seminar</a>&nbsp;
-<a href=https://pacificbelt30.github.io/tags/raspberrypi/>RaspberryPi</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/github/>github</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/git/>git</a>&nbsp;
 </div>
+<h4 class=see-also>See also</h4>
+<ul>
+<li><a href=/post/github_image_post/>GithubのREADMEで画像を使う方法</a></li>
+</ul>
 </article>
-</div>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://pacificbelt30.github.io/post/github_image_post/ data-toggle=tooltip data-placement=top title=GithubのREADMEで画像を使う方法>&larr; Previous Post</a>
+</li>
+</ul>
 </div>
 </div>
 </div>
