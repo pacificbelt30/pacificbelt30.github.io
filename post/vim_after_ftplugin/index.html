@@ -3,15 +3,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Overview of all pages with the tag #Tags - 自分用ドキュメント置き場</title>
-<meta name=description content="Overview of all pages with the tag #Tags, such as: i3">
+<title>Vim_after_ftplugin - 自分用ドキュメント置き場</title>
+<meta name=description content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<meta property="og:title" content="Tags">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","name":"Vim after ftplugin"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"Vim_after_ftplugin","description":"summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合","inLanguage":"en","wordCount":1052,"datePublished":"2021-12-01T09:37:52","dateModified":"2021-12-01T09:37:52","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["vim, linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="Vim_after_ftplugin">
+<meta property="og:description" content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/tags/">
+<meta property="og:url" content="https://pacificbelt30.github.io/post/vim_after_ftplugin/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="Tags">
+<meta name=twitter:title content="Vim_after_ftplugin">
+<meta name=twitter:description content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
@@ -106,9 +109,14 @@
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=tags-heading>
-<h1>Tags</h1>
-<hr class=small>
+<div class=post-heading>
+<h1>Vim_after_ftplugin</h1>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1052&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
 </div>
 </div>
 </div>
@@ -116,186 +124,81 @@
 </div>
 </header>
 <div class=container role=main>
+<div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article class=post-preview>
-<div class=panel-group id=accordion>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapselinux data-parent=#accordion>
-<div class=panel-heading id=headerlinux>
-<h4 class=panel-title>
-linux
-<span class=badge>4</span>
-</h4>
+<article role=main class=blog-post>
+<aside style=border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px>
+<header>
+<h2>Vim_after_ftplugin</h2>
+</header>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#summary>summary</a></li>
+<li><a href=#ファイルタイプごとの設定が効かない>ファイルタイプごとの設定が効かない</a></li>
+<li><a href=#heading></a></li>
+<li><a href=#解決法>解決法</a></li>
+<li><a href=#最後に>最後に</a></li>
+</ul>
+</nav>
+</aside>
+<h2 id=summary>summary</h2>
+<p>vimの設定は<code>runtimepath</code>に設定されている順に読み込まれていき，
+衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合は
+<code>runtimepath</code>の後ろの方のpath上に書きましょう．</p>
+<h2 id=ファイルタイプごとの設定が効かない>ファイルタイプごとの設定が効かない</h2>
+<p>とあるファイル編集中にインデントがおかしいことに気がついたため，
+<code>init.vim</code>を確認したものの，そこにある記述とインデントの幅が合わない．
+原因はわからないもののとりあえず，ファイルタイプの設定に書けば適用されるだろうということで
+<code>~/.config/nvim/ftplugin/</code>以下にインデントの設定を記述した．
+これで万事解決かと思い，再度ファイルを編集するもインデントは治っていなかったため，
+本格的にどこで設定が書き換わっているかを調査することになった．</p>
+<h2 id=heading></h2>
+<p>vimには最後に値がsetされた部分をみるために<code>:verbose</code>コマンドが用意されている．
+これを用いて<code>tabstop</code>が最後に変更された部分を見ると</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=p>:</span><span class=nx>verbose</span> <span class=nx>set</span> <span class=nx>tabstop</span><span class=err>
+</span><span class=err></span>  <span class=p>-&gt;</span> <span class=nx>tabstop</span><span class=p>=</span><span class=m>4</span><span class=err>
+</span><span class=err></span>      <span class=nx>最後にセットしたスクリプト</span>: <span class=sr>/usr/</span><span class=nx>share</span><span class=sr>/nvim/</span><span class=nx>runtime</span><span class=sr>/ftplugin/</span> <span class=nx>line</span> <span class=m>41</span><span class=err>
+</span></code></pre></div><p>となっていて，<code>.config/nvim</code>以下の<code>ftplugin</code>ディレクトリの設定ではない他の設定が読み込まれていた．</p>
+<p>vimの設定の読み込み順について調べると
+どうやら<code>runtimepath</code>に設定されているpathを上から順に読み込んでいく形であり，
+今回のケースでは<code>.config/nvim</code>以下の<code>ftplugin</code>ディレクトリの設定よりもあとに他の設定が読み込まれ書き換わっていた．</p>
+<h2 id=解決法>解決法</h2>
+<p><code>.config/nvim/ftplugin</code>の設定があとから上書きされてしまうならさらにそれよりもあとから上書きしてやれば良い．
+ということで，</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=p>:</span><span class=nx>set</span> <span class=nx>runtimepath</span><span class=err>
+</span></code></pre></div><p>を実行し，出力された<code>runtimepath</code>の比較的下の方にあるpathに新しく設定ファイルを置くことにする．
+今回は<code>~/.config/nvim/after</code>以下に<code>ftplugin/</code>ディレクトリを作成し，その中にファイルを置くことにした．</p>
+<p><code>.config/nvim/ftplugin</code>に置いていたファイルを<code>~/.config/nvim/after/ftplugin/</code>にコピーし，
+最後にセットされた箇所を確認すると</p>
+<pre tabindex=0><code>:verbose set tabstop
+  -&gt; tabstop=2
+    最後にセットしたスクリプト: ~/.config/nvim/after/ftplugin/rust.vim line 41
+</code></pre><p>というわけで設定を適用することができた．</p>
+<h2 id=最後に>最後に</h2>
+<ul>
+<li><code>runtimepath</code>と設定の読み込み順が重要なことを知ることができた．</li>
+<li>これからはファイルタイプごとの設定は<code>~/.config/nvim/after/ftplugin/</code>に書いていく．</li>
+</ul>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/vim/>vim</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
 </div>
-</a>
-<div id=collapselinux class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/linux/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-<a href=https://pacificbelt30.github.io/post/iptable_nat/ class=list-group-item>iptableでssh転送</a>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegithub data-parent=#accordion>
-<div class=panel-heading id=headergithub>
-<h4 class=panel-title>
-github
-<span class=badge>2</span>
-</h4>
-</div>
-</a>
-<div id=collapsegithub class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/github/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-<a href=https://pacificbelt30.github.io/post/github_image_post/ class=list-group-item>GithubのREADMEで画像を使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegit data-parent=#accordion>
-<div class=panel-heading id=headergit>
-<h4 class=panel-title>
-git
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsegit class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/git/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsei3 data-parent=#accordion>
-<div class=panel-heading id=headeri3>
-<h4 class=panel-title>
-i3
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsei3 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/i3/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseraspberrypi data-parent=#accordion>
-<div class=panel-heading id=headerraspberrypi>
-<h4 class=panel-title>
-raspberrypi
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseraspberrypi class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/raspberrypi/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsesamba data-parent=#accordion>
-<div class=panel-heading id=headersamba>
-<h4 class=panel-title>
-samba
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsesamba class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/samba/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseseminar data-parent=#accordion>
-<div class=panel-heading id=headerseminar>
-<h4 class=panel-title>
-seminar
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseseminar class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/seminar/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsevim data-parent=#accordion>
-<div class=panel-heading id=headervim>
-<h4 class=panel-title>
-vim
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsevim class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/vim/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsexfce4 data-parent=#accordion>
-<div class=panel-heading id=headerxfce4>
-<h4 class=panel-title>
-xfce4
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsexfce4 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/xfce4/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+<h4 class=see-also>See also</h4>
+<ul>
+<li><a href=/post/i3_power_manager/>I3_power_manager</a></li>
+<li><a href=/post/iptable_nat/>iptableでssh転送</a></li>
+<li><a href=/post/smb_config/>Sambaの設定</a></li>
+</ul>
 </article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://pacificbelt30.github.io/post/git_abort/ data-toggle=tooltip data-placement=top title=Gitでmergeを取り消す方法>&larr; Previous Post</a>
+</li>
+<li class=next>
+<a href=https://pacificbelt30.github.io/post/smb_config/ data-toggle=tooltip data-placement=top title=Sambaの設定>Next Post &rarr;</a>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <footer>

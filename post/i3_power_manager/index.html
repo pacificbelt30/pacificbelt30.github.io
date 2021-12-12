@@ -3,15 +3,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Overview of all pages with the tag #Tags - 自分用ドキュメント置き場</title>
-<meta name=description content="Overview of all pages with the tag #Tags, such as: i3">
+<title>I3_power_manager - 自分用ドキュメント置き場</title>
+<meta name=description content="EndeavorOSのスクリーンセーバーの設定がうまく行かない話 現状怪しいところ $ ps -aux | grep xfce4 user 844 0.0 0.6 507980 48540 ? Sl 13:24 0:00 xfce4-power-manager user 847 0.0 0.3 234756 30000 ? Sl 13:24 0:00 xfce4-screensaver user 862">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<meta property="og:title" content="Tags">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/i3_power_manager\/","name":"I3 power manager"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"I3_power_manager","description":"EndeavorOSのスクリーンセーバーの設定がうまく行かない話 現状怪しいところ $ ps -aux | grep xfce4 user 844 0.0 0.6 507980 48540 ? Sl 13:24 0:00 xfce4-power-manager user 847 0.0 0.3 234756 30000 ? Sl 13:24 0:00 xfce4-screensaver user 862","inLanguage":"en","wordCount":156,"datePublished":"2021-12-07T13:49:44","dateModified":"2021-12-07T13:49:44","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["linux, i3, xfce4"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/i3_power_manager\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="I3_power_manager">
+<meta property="og:description" content="EndeavorOSのスクリーンセーバーの設定がうまく行かない話 現状怪しいところ $ ps -aux | grep xfce4 user 844 0.0 0.6 507980 48540 ? Sl 13:24 0:00 xfce4-power-manager user 847 0.0 0.3 234756 30000 ? Sl 13:24 0:00 xfce4-screensaver user 862">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/tags/">
+<meta property="og:url" content="https://pacificbelt30.github.io/post/i3_power_manager/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="Tags">
+<meta name=twitter:title content="I3_power_manager">
+<meta name=twitter:description content="EndeavorOSのスクリーンセーバーの設定がうまく行かない話 現状怪しいところ $ ps -aux | grep xfce4 user 844 0.0 0.6 507980 48540 ? Sl 13:24 0:00 xfce4-power-manager user 847 0.0 0.3 234756 30000 ? Sl 13:24 0:00 xfce4-screensaver user …">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
@@ -106,9 +109,14 @@
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=tags-heading>
-<h1>Tags</h1>
-<hr class=small>
+<div class=post-heading>
+<h1>I3_power_manager</h1>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 7, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;156&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
 </div>
 </div>
 </div>
@@ -116,186 +124,41 @@
 </div>
 </header>
 <div class=container role=main>
+<div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article class=post-preview>
-<div class=panel-group id=accordion>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapselinux data-parent=#accordion>
-<div class=panel-heading id=headerlinux>
-<h4 class=panel-title>
-linux
-<span class=badge>4</span>
-</h4>
+<article role=main class=blog-post>
+<h2 id=endeavorosのスクリーンセーバーの設定がうまく行かない話>EndeavorOSのスクリーンセーバーの設定がうまく行かない話</h2>
+<h2 id=現状怪しいところ>現状怪しいところ</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>$ ps -aux <span class=p>|</span> grep xfce4
+user         <span class=m>844</span>  0.0  0.6 <span class=m>507980</span> <span class=m>48540</span> ?        Sl   13:24   0:00 xfce4-power-manager
+user         <span class=m>847</span>  0.0  0.3 <span class=m>234756</span> <span class=m>30000</span> ?        Sl   13:24   0:00 xfce4-screensaver
+user         <span class=m>862</span>  0.0  0.0 <span class=m>229348</span>  <span class=m>5976</span> ?        Sl   13:24   0:00 /usr/lib/xfce4/xfconf/xfconfd
+user        <span class=m>4391</span>  0.7  0.8 <span class=m>668976</span> <span class=m>69056</span> ?        Rl   13:25   0:11 xfce4-terminal
+user       <span class=m>43271</span>  0.0  0.0   <span class=m>7548</span>  <span class=m>2460</span> pts/0    S+   13:51   0:00 grep --color<span class=o>=</span>auto xfce4
+</code></pre></div><p>autostartでscreensaverとpower-managerが起動しているのがよくなさそう</p>
+<ul>
+<li>dex</li>
+<li>/etc/xdg/autostart/</li>
+<li>/etc/lightdm/Xsession</li>
+</ul>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/i3/>i3</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/xfce4/>xfce4</a>&nbsp;
 </div>
-</a>
-<div id=collapselinux class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/linux/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-<a href=https://pacificbelt30.github.io/post/iptable_nat/ class=list-group-item>iptableでssh転送</a>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegithub data-parent=#accordion>
-<div class=panel-heading id=headergithub>
-<h4 class=panel-title>
-github
-<span class=badge>2</span>
-</h4>
-</div>
-</a>
-<div id=collapsegithub class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/github/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-<a href=https://pacificbelt30.github.io/post/github_image_post/ class=list-group-item>GithubのREADMEで画像を使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegit data-parent=#accordion>
-<div class=panel-heading id=headergit>
-<h4 class=panel-title>
-git
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsegit class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/git/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsei3 data-parent=#accordion>
-<div class=panel-heading id=headeri3>
-<h4 class=panel-title>
-i3
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsei3 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/i3/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseraspberrypi data-parent=#accordion>
-<div class=panel-heading id=headerraspberrypi>
-<h4 class=panel-title>
-raspberrypi
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseraspberrypi class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/raspberrypi/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsesamba data-parent=#accordion>
-<div class=panel-heading id=headersamba>
-<h4 class=panel-title>
-samba
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsesamba class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/samba/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseseminar data-parent=#accordion>
-<div class=panel-heading id=headerseminar>
-<h4 class=panel-title>
-seminar
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseseminar class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/seminar/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsevim data-parent=#accordion>
-<div class=panel-heading id=headervim>
-<h4 class=panel-title>
-vim
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsevim class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/vim/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsexfce4 data-parent=#accordion>
-<div class=panel-heading id=headerxfce4>
-<h4 class=panel-title>
-xfce4
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsexfce4 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/xfce4/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+<h4 class=see-also>See also</h4>
+<ul>
+<li><a href=/post/iptable_nat/>iptableでssh転送</a></li>
+<li><a href=/post/smb_config/>Sambaの設定</a></li>
+<li><a href=/post/vim_after_ftplugin/>Vim_after_ftplugin</a></li>
+</ul>
 </article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://pacificbelt30.github.io/post/image_ff/ data-toggle=tooltip data-placement=top title=Image_ff>&larr; Previous Post</a>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <footer>

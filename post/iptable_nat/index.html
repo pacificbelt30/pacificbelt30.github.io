@@ -3,15 +3,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Overview of all pages with the tag #Tags - 自分用ドキュメント置き場</title>
-<meta name=description content="Overview of all pages with the tag #Tags, such as: i3">
+<title>iptableでssh転送 - 自分用ドキュメント置き場</title>
+<meta name=description content="summary sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22 sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport 22 -j MASQUERADE sudo iptables-save > /etc/iptables.ipv4.nat 下準備 今回はiptableコマンドを使うので iptable --help を実行">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<meta property="og:title" content="Tags">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/iptable_nat\/","name":"Iptableでssh転送"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"iptableでssh転送","description":"summary sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22 sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0\/24 -p tcp -m tcp --dport 22 -j MASQUERADE sudo iptables-save \u0026gt; \/etc\/iptables.ipv4.nat 下準備 今回はiptableコマンドを使うので iptable --help を実行","inLanguage":"en","wordCount":466,"datePublished":"2021-12-01T13:51:10","dateModified":"2021-12-01T13:51:10","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/iptable_nat\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="iptableでssh転送">
+<meta property="og:description" content="summary sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22 sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport 22 -j MASQUERADE sudo iptables-save > /etc/iptables.ipv4.nat 下準備 今回はiptableコマンドを使うので iptable --help を実行">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/tags/">
+<meta property="og:url" content="https://pacificbelt30.github.io/post/iptable_nat/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="Tags">
+<meta name=twitter:title content="iptableでssh転送">
+<meta name=twitter:description content="summary sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22 sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p …">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
@@ -106,9 +109,14 @@
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=tags-heading>
-<h1>Tags</h1>
-<hr class=small>
+<div class=post-heading>
+<h1>iptableでssh転送</h1>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;466&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
 </div>
 </div>
 </div>
@@ -116,186 +124,70 @@
 </div>
 </header>
 <div class=container role=main>
+<div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article class=post-preview>
-<div class=panel-group id=accordion>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapselinux data-parent=#accordion>
-<div class=panel-heading id=headerlinux>
-<h4 class=panel-title>
-linux
-<span class=badge>4</span>
-</h4>
+<article role=main class=blog-post>
+<aside style=border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px>
+<header>
+<h2>iptableでssh転送</h2>
+</header>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#summary>summary</a></li>
+<li><a href=#下準備>下準備</a></li>
+<li><a href=#iptableでssh転送>iptableでssh転送</a></li>
+<li><a href=#設定の永続化>設定の永続化</a></li>
+<li><a href=#最後に>最後に</a></li>
+</ul>
+</nav>
+</aside>
+<h2 id=summary>summary</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport <span class=m>22</span> -j DNAT --to-destination 192.168.30.3:22
+sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport <span class=m>22</span> -j MASQUERADE
+sudo iptables-save &gt; /etc/iptables.ipv4.nat
+</code></pre></div><h2 id=下準備>下準備</h2>
+<p>今回はiptableコマンドを使うので</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>iptable --help
+</code></pre></div><p>を実行して，iptableコマンドが使用可能なことを確認しておく．</p>
+<h2 id=iptableでssh転送>iptableでssh転送</h2>
+<p>sshを転送するための設定を行う．
+次のコマンドを実行し，
+ipの転送設定を行う．
+IPアドレスは任意の値にする．</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport <span class=m>22</span> -j DNAT --to-destination 192.168.30.3:22
+sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport <span class=m>22</span> -j MASQUERADE
+</code></pre></div><p>1つ目のコマンド
+<code>iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22</code>
+は<code>-d</code>のあとに指定したIPアドレスに対するアクセスを<code>--to-destination</code>のあとに指定したIPアドレスに転送する設定を表している．
+2つ目のコマンド
+<code>iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport 22 -j MASQUERADE</code>
+は<code>-s</code>のあとに指定したIPアドレスの端末と1つ目のコマンドで指定したIPアドレスの端末とをつなぐ役割？（よくわかってない）</p>
+<p>これを実行するとsshの転送ができるはず．</p>
+<h2 id=設定の永続化>設定の永続化</h2>
+<p><a href=https://pacificbelt30.github.io/post/raspi_ap/>ここ</a>のやり方でアクセスポイントを構築した場合は</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>sudo iptables-save &gt; /etc/iptables.ipv4.nat
+</code></pre></div><p>を実行すると良い．</p>
+<h2 id=最後に>最後に</h2>
+<p>できない人は自分で調べて</p>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
 </div>
-</a>
-<div id=collapselinux class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/linux/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-<a href=https://pacificbelt30.github.io/post/iptable_nat/ class=list-group-item>iptableでssh転送</a>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegithub data-parent=#accordion>
-<div class=panel-heading id=headergithub>
-<h4 class=panel-title>
-github
-<span class=badge>2</span>
-</h4>
-</div>
-</a>
-<div id=collapsegithub class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/github/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-<a href=https://pacificbelt30.github.io/post/github_image_post/ class=list-group-item>GithubのREADMEで画像を使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsegit data-parent=#accordion>
-<div class=panel-heading id=headergit>
-<h4 class=panel-title>
-git
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsegit class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/git/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/git_abort/ class=list-group-item>Gitでmergeを取り消す方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsei3 data-parent=#accordion>
-<div class=panel-heading id=headeri3>
-<h4 class=panel-title>
-i3
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsei3 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/i3/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseraspberrypi data-parent=#accordion>
-<div class=panel-heading id=headerraspberrypi>
-<h4 class=panel-title>
-raspberrypi
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseraspberrypi class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/raspberrypi/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsesamba data-parent=#accordion>
-<div class=panel-heading id=headersamba>
-<h4 class=panel-title>
-samba
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsesamba class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/samba/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/smb_config/ class=list-group-item>Sambaの設定</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapseseminar data-parent=#accordion>
-<div class=panel-heading id=headerseminar>
-<h4 class=panel-title>
-seminar
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapseseminar class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/seminar/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/raspi_ap/ class=list-group-item>ラズパイをWiFiのアクセスポイントとして使う方法</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsevim data-parent=#accordion>
-<div class=panel-heading id=headervim>
-<h4 class=panel-title>
-vim
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsevim class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/vim/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=list-group-item>Vim_after_ftplugin</a>
-</div>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<a class=collapsed role=button data-toggle=collapse data-target=#collapsexfce4 data-parent=#accordion>
-<div class=panel-heading id=headerxfce4>
-<h4 class=panel-title>
-xfce4
-<span class=badge>1</span>
-</h4>
-</div>
-</a>
-<div id=collapsexfce4 class="panel-collapse collapse">
-<div class=panel-body>
-<a href=https://pacificbelt30.github.io/tags/xfce4/ class="list-group-item view-all">
-View all</a>
-<div class=list-group>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=list-group-item>I3_power_manager</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+<h4 class=see-also>See also</h4>
+<ul>
+<li><a href=/post/i3_power_manager/>I3_power_manager</a></li>
+<li><a href=/post/smb_config/>Sambaの設定</a></li>
+<li><a href=/post/vim_after_ftplugin/>Vim_after_ftplugin</a></li>
+</ul>
 </article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://pacificbelt30.github.io/post/smb_config/ data-toggle=tooltip data-placement=top title=Sambaの設定>&larr; Previous Post</a>
+</li>
+<li class=next>
+<a href=https://pacificbelt30.github.io/post/image_ff/ data-toggle=tooltip data-placement=top title=Image_ff>Next Post &rarr;</a>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <footer>

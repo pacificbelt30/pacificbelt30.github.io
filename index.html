@@ -14,7 +14,7 @@
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
-<meta name=generator content="Hugo 0.89.4">
+<meta name=generator content="Hugo 0.90.1">
 <link rel=alternate href=https://pacificbelt30.github.io/index.xml type=application/rss+xml title=自分用ドキュメント置き場><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
 <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
 <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://pacificbelt30.github.io/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -119,6 +119,105 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <div class=posts-list>
+<article class=post-preview>
+<a href=https://pacificbelt30.github.io/post/i3_power_manager/>
+<h2 class=post-title>I3_power_manager</h2>
+</a>
+<p class=post-meta>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 7, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;156&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
+</p>
+<div class=post-entry>
+EndeavorOSのスクリーンセーバーの設定がうまく行かない話 現状怪しいところ $ ps -aux | grep xfce4 user 844 0.0 0.6 507980 48540 ? Sl 13:24 0:00 xfce4-power-manager user 847 0.0 0.3 234756 30000 ? Sl 13:24 0:00 xfce4-screensaver user 862
+<a href=https://pacificbelt30.github.io/post/i3_power_manager/ class=post-read-more>[Read More]</a>
+</div>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/i3/>i3</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/xfce4/>xfce4</a>&nbsp;
+</div>
+</article>
+<article class=post-preview>
+<a href=https://pacificbelt30.github.io/post/image_ff/>
+<h2 class=post-title>Image_ff</h2>
+</a>
+<p class=post-meta>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 6, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
+</p>
+<div class=post-entry>
+</div>
+</article>
+<article class=post-preview>
+<a href=https://pacificbelt30.github.io/post/iptable_nat/>
+<h2 class=post-title>iptableでssh転送</h2>
+</a>
+<p class=post-meta>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;466&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
+</p>
+<div class=post-entry>
+summary sudo iptables -t nat -A PREROUTING -i eth0 -d 192.168.1.30 -p tcp -m tcp --dport 22 -j DNAT --to-destination 192.168.30.3:22 sudo iptables -t nat -A POSTROUTING -o wlan0 -s 192.168.1.0/24 -p tcp -m tcp --dport 22 -j MASQUERADE sudo iptables-save > /etc/iptables.ipv4.nat 下準備 今回はiptableコマンドを使うので iptable --help を実行
+<a href=https://pacificbelt30.github.io/post/iptable_nat/ class=post-read-more>[Read More]</a>
+</div>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
+</div>
+</article>
+<article class=post-preview>
+<a href=https://pacificbelt30.github.io/post/smb_config/>
+<h2 class=post-title>Sambaの設定</h2>
+</a>
+<p class=post-meta>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;745&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
+</p>
+<div class=post-entry>
+summary sambaをインストールして，設定を書く． ゲストログインをできるようにしたい場合はguest ok=yes,map to guest=Bad Userなどを指定する． 下準備 以下の環境
+<a href=https://pacificbelt30.github.io/post/smb_config/ class=post-read-more>[Read More]</a>
+</div>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/samba/>samba</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
+</div>
+</article>
+<article class=post-preview>
+<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/>
+<h2 class=post-title>Vim_after_ftplugin</h2>
+</a>
+<p class=post-meta>
+<span class=post-meta>
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1052&nbsp;words
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
+</span>
+</p>
+<div class=post-entry>
+summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合
+<a href=https://pacificbelt30.github.io/post/vim_after_ftplugin/ class=post-read-more>[Read More]</a>
+</div>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/vim/>vim</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
+</div>
+</article>
 <article class=post-preview>
 <a href=https://pacificbelt30.github.io/post/git_abort/>
 <h2 class=post-title>Gitでmergeを取り消す方法</h2>
@@ -234,7 +333,7 @@
 <a href=https://pacificbelt30.github.io>自分用ドキュメント置き場</a>
 </p>
 <p class="credits theme-by text-muted">
-<a href=https://gohugo.io>Hugo v0.89.4</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
+<a href=https://gohugo.io>Hugo v0.90.1</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
 </p>
 </div>
 </div>
