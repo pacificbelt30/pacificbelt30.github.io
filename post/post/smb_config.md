@@ -24,8 +24,8 @@ sudo apt install samba
 
 インストール後にsambaを有効化する．
 ```sh
-systemctl start samba
-systemctl enable samba
+systemctl start smbd
+systemctl enable smbd
 ```
 インストール直後はsambaのデフォルトの設定が適用された状態で
 このままでも使うことはできるが，
