@@ -1,5 +1,5 @@
 ---
-title: "Vim_after_ftplugin"
+title: "vimの設定の読み込み順序"
 date: 2021-12-01T09:37:52+09:00
 tags: ["vim","linux"]
 featured_image: ""

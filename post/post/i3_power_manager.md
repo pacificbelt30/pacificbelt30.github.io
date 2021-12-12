@@ -1,5 +1,5 @@
 ---
-title: "I3_power_manager"
+title: "xfce4のディスプレイの設定が適用されない"
 date: 2021-12-07T13:49:44+09:00
 tags: ["linux","i3","xfce4"]
 featured_image: ""
@@ -23,3 +23,4 @@ autostartでscreensaverとpower-managerが起動しているのがよくなさ�
 - dex
 - /etc/xdg/autostart/
 - /etc/lightdm/Xsession
+
