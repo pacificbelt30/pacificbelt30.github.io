@@ -3,17 +3,17 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Vim_after_ftplugin - 自分用ドキュメント置き場</title>
+<title>vimの設定の読み込み順序 - 自分用ドキュメント置き場</title>
 <meta name=description content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","name":"Vim after ftplugin"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"Vim_after_ftplugin","description":"summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合","inLanguage":"en","wordCount":1052,"datePublished":"2021-12-01T09:37:52","dateModified":"2021-12-01T09:37:52","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["vim, linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
-<meta property="og:title" content="Vim_after_ftplugin">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","name":"Vimの設定の読み込み順序"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"vimの設定の読み込み順序","description":"summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合","inLanguage":"en","wordCount":1052,"datePublished":"2021-12-01T09:37:52","dateModified":"2021-12-01T09:37:52","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["vim, linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/vim_after_ftplugin\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="vimの設定の読み込み順序">
 <meta property="og:description" content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta property="og:url" content="https://pacificbelt30.github.io/post/vim_after_ftplugin/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="Vim_after_ftplugin">
+<meta name=twitter:title content="vimの設定の読み込み順序">
 <meta name=twitter:description content="summary vimの設定はruntimepathに設定されている順に読み込まれていき， 衝突する部分は上書きされるのでデフォルトの設定を上書きしたい場合">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
@@ -110,7 +110,7 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <div class=post-heading>
-<h1>Vim_after_ftplugin</h1>
+<h1>vimの設定の読み込み順序</h1>
 <span class=post-meta>
 <i class="fas fa-calendar"></i>&nbsp;Posted on December 1, 2021
 &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
@@ -129,7 +129,7 @@
 <article role=main class=blog-post>
 <aside style=border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px>
 <header>
-<h2>Vim_after_ftplugin</h2>
+<h2>vimの設定の読み込み順序</h2>
 </header>
 <nav id=TableOfContents>
 <ul>
@@ -185,7 +185,7 @@
 </div>
 <h4 class=see-also>See also</h4>
 <ul>
-<li><a href=/post/i3_power_manager/>I3_power_manager</a></li>
+<li><a href=/post/i3_power_manager/>xfce4のディスプレイの設定が適用されない</a></li>
 <li><a href=/post/iptable_nat/>iptableでssh転送</a></li>
 <li><a href=/post/smb_config/>Sambaの設定</a></li>
 </ul>

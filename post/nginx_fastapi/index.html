@@ -3,15 +3,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Image_ff - 自分用ドキュメント置き場</title>
+<title>fastapiのリバースプロキシとしてNginxを使う - 自分用ドキュメント置き場</title>
+<meta name=description content="fastapi設定 fastapiをインストール pip install -m fastapi uvicorn nginxの設定 nginxの設定ファイル/etc/nginx/nginx.confを">
 <meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/image_ff\/","name":"Image ff"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"Image_ff","description":"","inLanguage":"en","wordCount":0,"datePublished":"2021-12-06T12:44:15","dateModified":"2021-12-06T12:44:15","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":[""],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/image_ff\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
-<meta property="og:title" content="Image_ff">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/nginx_fastapi\/","name":"Fastapiのリバースプロキシとして nginxを使う"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"fastapiのリバースプロキシとしてNginxを使う","description":"fastapi設定 fastapiをインストール pip install -m fastapi uvicorn nginxの設定 nginxの設定ファイル\/etc\/nginx\/nginx.confを","inLanguage":"en","wordCount":261,"datePublished":"2021-12-13T01:05:41","dateModified":"2021-12-13T01:05:41","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["nginx, python, fastapi"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/nginx_fastapi\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
+<meta property="og:title" content="fastapiのリバースプロキシとしてNginxを使う">
+<meta property="og:description" content="fastapi設定 fastapiをインストール pip install -m fastapi uvicorn nginxの設定 nginxの設定ファイル/etc/nginx/nginx.confを">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/post/image_ff/">
+<meta property="og:url" content="https://pacificbelt30.github.io/post/nginx_fastapi/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="Image_ff">
+<meta name=twitter:title content="fastapiのリバースプロキシとしてNginxを使う">
+<meta name=twitter:description content="fastapi設定 fastapiをインストール pip install -m fastapi uvicorn nginxの設定 nginxの設定ファイル/etc/nginx/nginx.confを">
 <meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
 <meta name=twitter:card content="summary">
 <link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
@@ -107,11 +110,11 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <div class=post-heading>
-<h1>Image_ff</h1>
+<h1>fastapiのリバースプロキシとしてNginxを使う</h1>
 <span class=post-meta>
-<i class="fas fa-calendar"></i>&nbsp;Posted on December 6, 2021
-&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
-&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
+<i class="fas fa-calendar"></i>&nbsp;Posted on December 13, 2021
+&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;261&nbsp;words
 &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
 </span>
 </div>
@@ -124,13 +127,40 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <article role=main class=blog-post>
+<h2 id=fastapi設定>fastapi設定</h2>
+<p>fastapiをインストール</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>pip install -m fastapi uvicorn
+</code></pre></div><h2 id=nginxの設定>nginxの設定</h2>
+<p>nginxの設定ファイル<code>/etc/nginx/nginx.conf</code>を開き，
+以下を追記
+uvicornのデフォルトのポートが8000になっているのでserver以下には<code>localhost:8000</code>と指定する</p>
+<pre tabindex=0><code>upstream fastapi{
+  server localhost:8000;
+}
+
+server {
+    listen       80;
+
+    location / {
+      proxy_pass http://fastapi;
+    }
+}
+</code></pre><p>設定編集後は再起動</p>
+<pre tabindex=0><code>systemctl restart nginx
+</code></pre><h2 id=実行>実行</h2>
+<p>あとはfastapiを実行して，
+<a href=http://localhost>localhostの80番ポート</a>にアクセスしてfastapi側の処理が実行されていることを確認する．</p>
+<h2 id=reference>reference</h2>
+<p><a href=https://qiita.com/junkor-1011/items/02ed76b94c60deba8282#web-nginx%E3%81%AB%E3%82%88%E3%82%8Bweb%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC>FastAPI + uvicorn + nginxをdocker-composeで構築</a></p>
+<div class=blog-tags>
+<a href=https://pacificbelt30.github.io/tags/nginx/>nginx</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/python/>python</a>&nbsp;
+<a href=https://pacificbelt30.github.io/tags/fastapi/>fastapi</a>&nbsp;
+</div>
 </article>
 <ul class="pager blog-pager">
 <li class=previous>
-<a href=https://pacificbelt30.github.io/post/iptable_nat/ data-toggle=tooltip data-placement=top title=iptableでssh転送>&larr; Previous Post</a>
-</li>
-<li class=next>
-<a href=https://pacificbelt30.github.io/post/i3_power_manager/ data-toggle=tooltip data-placement=top title=xfce4のディスプレイの設定が適用されない>Next Post &rarr;</a>
+<a href=https://pacificbelt30.github.io/post/i3_power_manager/ data-toggle=tooltip data-placement=top title=xfce4のディスプレイの設定が適用されない>&larr; Previous Post</a>
 </li>
 </ul>
 </div>
