@@ -1,5 +1,5 @@
 ---
-title: "pacmanでパッケージを更新したときに「」"
+title: "pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る"
 date: 2022-01-17T01:47:42+09:00
 tags: ["linux"]
 featured_image: ""
