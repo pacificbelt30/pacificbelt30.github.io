@@ -76,8 +76,8 @@ buildFuture = true
 
 [[menu.main]]
     parent = "tools"
-    name = "2進数-16進数変換(予定)"
-    url = "https://pacificbelt30.github.io/moji_count/"
+    name = "論文の文章コピペ用改行取り除きツール"
+    url = "https://pacificbelt30.github.io/moji_count/paper.html"
     weight = 2
 
 [[menu.main]]
