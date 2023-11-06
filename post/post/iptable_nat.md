@@ -1,7 +1,7 @@
 ---
 title: "iptableでssh転送"
 date: 2021-12-01T13:51:10+09:00
-tags: ["linux","ssh"]
+tags: ["linux"]
 featured_image: ""
 description: ""
 toc: true
