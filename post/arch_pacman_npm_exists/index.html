@@ -1,149 +1,21 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る - 自分用ドキュメント置き場</title>
-<meta name=description content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ">
-<meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/arch_pacman_npm_exists\/","name":"Pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る","description":"問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ","inLanguage":"en","wordCount":1536,"datePublished":"2022-01-17T01:47:42","dateModified":"2022-01-17T01:47:42","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/arch_pacman_npm_exists\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script>
-<meta property="og:title" content="pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る">
-<meta property="og:description" content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta property="og:url" content="https://pacificbelt30.github.io/post/arch_pacman_npm_exists/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="自分用ドキュメント置き場">
-<meta name=twitter:title content="pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る">
-<meta name=twitter:description content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ">
-<meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&v=4">
-<meta name=twitter:card content="summary">
-<link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon>
-<meta name=generator content="Hugo 0.92.0">
-<link rel=alternate href=https://pacificbelt30.github.io/index.xml type=application/rss+xml title=自分用ドキュメント置き場><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://pacificbelt30.github.io/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-<link rel=stylesheet href=https://pacificbelt30.github.io/css/highlight.min.css><link rel=stylesheet href=https://pacificbelt30.github.io/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
-<meta name=robots content="noindex,nofollow">
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る - 自分用ドキュメント置き場</title>
+<meta name=description content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ"><meta name=author content="Pacificbelt30"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"自分用ドキュメント置き場","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/pacificbelt30.github.io"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/pacificbelt30.github.io","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/pacificbelt30.github.io\/post\/arch_pacman_npm_exists\/","name":"Pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Pacificbelt30"},"headline":"pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る","description":"問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ","inLanguage":"en","wordCount":1536,"datePublished":"2022-01-17T01:47:42","dateModified":"2022-01-17T01:47:42","image":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","keywords":["linux"],"mainEntityOfPage":"https:\/\/pacificbelt30.github.io\/post\/arch_pacman_npm_exists\/","publisher":{"@type":"Organization","name":"https:\/\/pacificbelt30.github.io","logo":{"@type":"ImageObject","url":"https:\/\/avatars.githubusercontent.com\/u\/57101176?s=400\u0026v=4","height":60,"width":60}}}</script><meta property="og:title" content="pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る"><meta property="og:description" content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ"><meta property="og:image" content="https://avatars.githubusercontent.com/u/57101176?s=400&amp;v=4"><meta property="og:url" content="https://pacificbelt30.github.io/post/arch_pacman_npm_exists/"><meta property="og:type" content="website"><meta property="og:site_name" content="自分用ドキュメント置き場"><meta name=twitter:title content="pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る"><meta name=twitter:description content="問題 いつもどおり数週間放置したパッケージの更新を行ったとき， めちゃくちゃエラーが出た． エラー: 処理を完了できませんでした (衝突しているファイ"><meta name=twitter:image content="https://avatars.githubusercontent.com/u/57101176?s=400&amp;v=4"><meta name=twitter:card content="summary"><link href=https://pacificbelt30.github.io/img/favicon.ico rel=icon type=image/x-icon><meta name=generator content="Hugo 0.120.3"><link rel=alternate href=https://pacificbelt30.github.io/index.xml type=application/rss+xml title=自分用ドキュメント置き場><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://pacificbelt30.github.io/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://pacificbelt30.github.io/css/highlight.min.css><link rel=stylesheet href=https://pacificbelt30.github.io/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><meta name=robots content="noindex,nofollow"></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 </button>
-<a class=navbar-brand href=https://pacificbelt30.github.io>自分用ドキュメント置き場</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a title=Blog href=/>Blog</a>
-</li>
-<li class=navlinks-container>
-<a class=navlinks-parent>Tools</a>
-<div class=navlinks-children>
-<a href=/moji_count/>文字数カウンタ</a>
-<a href=/moji_count/>2進数-16進数変換(予定)</a>
-</div>
-</li>
-<li>
-<a title=About href=/page/about/>About</a>
-</li>
-<li>
-<a title=Tags href=/tags>Tags</a>
-</li>
-</ul>
-</div>
-<div class=avatar-container>
-<div class=avatar-img-border>
-<a title=自分用ドキュメント置き場 href=https://pacificbelt30.github.io>
-<img class=avatar-img src="https://avatars.githubusercontent.com/u/57101176?s=400&v=4" alt=自分用ドキュメント置き場>
-</a>
-</div>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a class=navbar-brand href=https://pacificbelt30.github.io>自分用ドキュメント置き場</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=Blog href=/>Blog</a></li><li class=navlinks-container><a class=navlinks-parent>Tools</a><div class=navlinks-children><a href=/moji_count/>文字数カウンタ</a>
+<a href=/moji_count/>2進数-16進数変換(予定)</a></div></li><li><a title=About href=/page/about/>About</a></li><li><a title=Tags href=/tags>Tags</a></li></ul></div><div class=avatar-container><div class=avatar-img-border><a title=自分用ドキュメント置き場 href=https://pacificbelt30.github.io><img class=avatar-img src="https://avatars.githubusercontent.com/u/57101176?s=400&amp;v=4" alt=自分用ドキュメント置き場></a></div></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る</h1>
-<span class=post-meta>
-<i class="fas fa-calendar"></i>&nbsp;Posted on January 17, 2022
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る</h1><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on January 17, 2022
 &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
 &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1536&nbsp;words
-&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<aside style=border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px>
-<header>
-<h2>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る</h2>
-</header>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#問題>問題</a></li>
-<li><a href=#解決策>解決策</a></li>
-<li><a href=#最後に>最後に</a></li>
-<li><a href=#参考>参考</a></li>
-</ul>
-</nav>
-</aside>
-<h2 id=問題>問題</h2>
-<p>いつもどおり数週間放置したパッケージの更新を行ったとき，
-めちゃくちゃエラーが出た．</p>
-<pre tabindex=0><code>エラー: 処理を完了できませんでした (衝突しているファイル)
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Pacificbelt30</span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><aside style=border-left:3px;border-left-style:solid;margin-left:10px;padding-left:10px><header><h2>pacmanでパッケージを更新したときにnode関連で「ファイルシステムに存在しています」と出る</h2></header><nav id=TableOfContents><ul><li><a href=#問題>問題</a></li><li><a href=#解決策>解決策</a></li><li><a href=#最後に>最後に</a></li><li><a href=#参考>参考</a></li></ul></nav></aside><h2 id=問題>問題</h2><p>いつもどおり数週間放置したパッケージの更新を行ったとき，
+めちゃくちゃエラーが出た．</p><pre tabindex=0><code>エラー: 処理を完了できませんでした (衝突しているファイル)
 gtop: /usr/lib/node_modules/gtop/CLI.md がファイルシステムに存在しています
 node-gyp: /usr/lib/node_modules/node-gyp/.github/workflows/visual-studio.yml がファイルシステムに存在しています
 node-gyp: /usr/lib/node_modules/node-gyp/node_modules/.bin/color-support がファイルシステムに存在しています
@@ -203,84 +75,17 @@ node-gyp: /usr/lib/node_modules/node-gyp/node_modules/string-width/index.d.ts �
 node-gyp: /usr/lib/node_modules/node-gyp/node_modules/strip-ansi/index.d.ts がファイルシステムに存在しています
 node-gyp: /usr/lib/node_modules/node-gyp/test/fixtures/nodedir/include/node/config.gypi がファイルシステムに存在しています
 エラーが発生したため、パッケージは更新されませんでした。
-</code></pre><p>なんか前にも出た気がするのでなんとかなるやろっということで検索履歴をたどる．</p>
-<h2 id=解決策>解決策</h2>
-<p>これが正攻法ではない気がするけど
-ファイルが存在していて更新ができないなら強制的に上書きすればよいということで</p>
-<pre tabindex=0><code>sudo pacman -S npm --overwrite='*'
+</code></pre><p>なんか前にも出た気がするのでなんとかなるやろっということで検索履歴をたどる．</p><h2 id=解決策>解決策</h2><p>これが正攻法ではない気がするけど
+ファイルが存在していて更新ができないなら強制的に上書きすればよいということで</p><pre tabindex=0><code>sudo pacman -S npm --overwrite=&#39;*&#39;
 </code></pre><p>とかやってパッケージのインストール時にファイルを上書きするようにしたらうまく行った．
 これをエラーが出てるnpm,node-gyp,gtopについて実行する．
-ここまでやったら再び</p>
-<pre tabindex=0><code>sudo pacman -Syu
-</code></pre><p>でパッケージの更新を行うと無事更新が通った．</p>
-<h2 id=最後に>最後に</h2>
-<p>今回は比較的すぐに解決できたけど，またすぐに遭遇して履歴をたどるめんどくさい作業を行う必要がありそうなのでここにまとめておく．
-実際npmをpacmanで管理することがじつは間違ってたりするんですかね．</p>
-<h2 id=参考>参考</h2>
-<p><a href=https://github.com/nodesource/distributions/issues/636>npm update error in arch</a>
-<a href=https://stackoverflow.com/questions/67353216/failed-to-commit-transaction-conflicting-files-when-updating-packages-on-manja>Failed to commit transaction (conflicting files) when updating packages on Manjaro</a></p>
-<div class=blog-tags>
-<a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;
-</div>
-<h4 class=see-also>See also</h4>
-<ul>
-<li><a href=/post/i3_power_manager/>xfce4のディスプレイの設定が適用されない</a></li>
-<li><a href=/post/iptable_nat/>iptableでssh転送</a></li>
-<li><a href=/post/smb_config/>Sambaの設定</a></li>
-<li><a href=/post/vim_after_ftplugin/>vimの設定の読み込み順序</a></li>
-</ul>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://pacificbelt30.github.io/post/nginx_fastapi/ data-toggle=tooltip data-placement=top title=fastapiのリバースプロキシとしてNginxを使う>&larr; Previous Post</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=https://github.com/pacificbelt30 title=GitHub>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-github fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href title=RSS>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-<a href=https://github.com/pacificbelt30>Pacificbelt30</a>
+ここまでやったら再び</p><pre tabindex=0><code>sudo pacman -Syu
+</code></pre><p>でパッケージの更新を行うと無事更新が通った．</p><h2 id=最後に>最後に</h2><p>今回は比較的すぐに解決できたけど，またすぐに遭遇して履歴をたどるめんどくさい作業を行う必要がありそうなのでここにまとめておく．
+実際npmをpacmanで管理することがじつは間違ってたりするんですかね．</p><h2 id=参考>参考</h2><p><a href=https://github.com/nodesource/distributions/issues/636>npm update error in arch</a>
+<a href=https://stackoverflow.com/questions/67353216/failed-to-commit-transaction-conflicting-files-when-updating-packages-on-manja>Failed to commit transaction (conflicting files) when updating packages on Manjaro</a></p><div class=blog-tags><a href=https://pacificbelt30.github.io/tags/linux/>linux</a>&nbsp;</div><h4 class=see-also>See also</h4><ul><li><a href=/post/git_gcm/>Git cloneなどremoteへのアクセス時にユーザ名とパスワードを毎回求められる話</a></li><li><a href=/post/i3_power_manager/>xfce4のディスプレイの設定が適用されない</a></li><li><a href=/post/iptable_nat/>iptableでssh転送</a></li><li><a href=/post/smb_config/>Sambaの設定</a></li><li><a href=/post/vim_after_ftplugin/>vimの設定の読み込み順序</a></li></ul></article><ul class="pager blog-pager"><li class=previous><a href=https://pacificbelt30.github.io/post/nginx_fastapi/ data-toggle=tooltip data-placement=top title=fastapiのリバースプロキシとしてNginxを使う>&larr; Previous Post</a></li><li class=next><a href=https://pacificbelt30.github.io/post/git_gcm/ data-toggle=tooltip data-placement=top title="Git cloneなどremoteへのアクセス時にユーザ名とパスワードを毎回求められる話">Next Post &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://github.com/pacificbelt30 title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href title=RSS><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted"><a href=https://github.com/pacificbelt30>Pacificbelt30</a>
 &nbsp;&bull;&nbsp;&copy;
 2021 - 2022
 &nbsp;&bull;&nbsp;
-<a href=https://pacificbelt30.github.io>自分用ドキュメント置き場</a>
-</p>
-<p class="credits theme-by text-muted">
-<a href=https://gohugo.io>Hugo v0.92.0</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
-<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
-<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
-<script src=https://pacificbelt30.github.io/js/main.js></script>
-<script src=https://pacificbelt30.github.io/js/highlight.min.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://pacificbelt30.github.io/js/load-photoswipe.js></script>
-</body>
-</html>
+<a href=https://pacificbelt30.github.io>自分用ドキュメント置き場</a></p><p class="credits theme-by text-muted"><a href=https://gohugo.io>Hugo v0.120.3</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a></p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://pacificbelt30.github.io/js/main.js></script><script src=https://pacificbelt30.github.io/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://pacificbelt30.github.io/js/load-photoswipe.js></script></body></html>
